@@ -1,0 +1,43 @@
+{
+    "name": "dhii/merge-strategy-interface",
+    "description": "Interfaces for standards-compliant merge strategies.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dhii Team",
+            "email": "development@dhii.co"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^5.3 | ^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "ptrofimov/xpmock": "^1.1",
+        "dhii/php-cs-fixer-config": "^0.1",
+        "codeclimate/php-test-reporter": "<=0.3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dhii\\Data\\Merging\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dhii\\Merge\\UnitTest\\": "test/unit",
+            "Dhii\\Merge\\FuncTest\\": "test/functional"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "csfix": "php-cs-fixer fix -vvv"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.1.x-dev"
+        }
+    }
+}
